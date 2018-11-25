@@ -48,5 +48,12 @@ L'écran, l'encodeur, les boutons et le module ESP ont des tailles bien détermi
 
 Ensuite on peut chercher des composants adaptés à l'espace restant. Le plus volumineux d'entre eux est la batterie LiPo. 10 batteries sont étudiées, le modèle de 1200 mAh rentre convenablement sans déborder.
 
-Voici l'esquisse résultant de cette étude.
+Voici l'esquisse résultant de cette étude :
 ![Esquisse n°1](/images/esquisse.png)
+
+
+## Etude en cours
+
+### Composants
+
+ * le réglage du capteur de secousse est difficile. Il y a une bascule rapide lors de la manipulation du potentiomètre (10k&Omega;). Le réglage à peu près correct amène le potard à 2,22V de tension pour 3,3V à ses bornes. Soit environ 3,3k&Omega;/6,7k&Omega; de résistance (vérifier le calcul). Tester avec une résistance de 5,1k&Omega; ou 6,8k&Omega; et un potard de 1k&Omega; ou 2k&Omega; en série pour permettre un réglage plus fin. Utiliser un potard de précision (celui avec une vraie vis).
