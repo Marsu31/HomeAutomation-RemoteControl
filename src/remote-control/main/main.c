@@ -30,6 +30,13 @@ void app_main() {
 	ESP_LOGI(TAG, " - create button scan hardware timer");
 	init_btn_scan_timer();
 
+	// Battery
+	ESP_LOGI(TAG, "BATTERY");
+	ESP_LOGI(TAG, " - configure battery check");
+	init_battery();
+	ESP_LOGI(TAG, " - create battery check timer");
+	configASSERT(init_battery_check_timer());
+
 	for (;;) {
 		vTaskDelay(1000 / portTICK_PERIOD_MS);
 	}

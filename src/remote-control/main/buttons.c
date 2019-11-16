@@ -177,18 +177,18 @@ void init_btn_scan_timer() {
 	config.alarm_en = TIMER_ALARM_EN;
 	config.intr_type = TIMER_INTR_LEVEL;
 	config.auto_reload = TIMER_AUTORELOAD_EN;
-	ESP_LOGD(TAG_BUTTONS, "   . init");
+	ESP_LOGI(TAG_BUTTONS, "   . init");
 	ESP_ERROR_CHECK(timer_init(BTN_SCAN_TIMER_GROUP, BTN_SCAN_TIMER, &config));
-	ESP_LOGD(TAG_BUTTONS, "   . counter value");
+	ESP_LOGI(TAG_BUTTONS, "   . counter value");
 	ESP_ERROR_CHECK(timer_set_counter_value(BTN_SCAN_TIMER_GROUP, BTN_SCAN_TIMER, 0x00000000ULL));
-	ESP_LOGD(TAG_BUTTONS, "   . set alarm value");
+	ESP_LOGI(TAG_BUTTONS, "   . set alarm value");
 	ESP_ERROR_CHECK(timer_set_alarm_value(BTN_SCAN_TIMER_GROUP, BTN_SCAN_TIMER, BTN_SCAN_TIMER_ALARM_PERIOD));
-	ESP_LOGD(TAG_BUTTONS, "   . enable intr");
+	ESP_LOGI(TAG_BUTTONS, "   . enable intr");
 	ESP_ERROR_CHECK(timer_enable_intr(BTN_SCAN_TIMER_GROUP, BTN_SCAN_TIMER));
-	ESP_LOGD(TAG_BUTTONS, "   . isr register");
+	ESP_LOGI(TAG_BUTTONS, "   . isr register");
 	ESP_ERROR_CHECK(timer_isr_register(BTN_SCAN_TIMER_GROUP, BTN_SCAN_TIMER, btn_scan_isr_handler, NULL, ESP_INTR_FLAG_IRAM, NULL));
-//	ESP_LOGD(TAG_BUTTONS, "   . NO start <<<<<--------------------- ATTENTION");
-	ESP_LOGD(TAG_BUTTONS, "   . start");
+//	ESP_LOGI(TAG_BUTTONS, "   . NO start <<<<<--------------------- ATTENTION");
+	ESP_LOGI(TAG_BUTTONS, "   . start");
 	ESP_ERROR_CHECK(timer_start(BTN_SCAN_TIMER_GROUP, BTN_SCAN_TIMER));
 }
 

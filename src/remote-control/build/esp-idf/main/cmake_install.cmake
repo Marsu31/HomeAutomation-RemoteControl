@@ -1,4 +1,4 @@
-# Install script for directory: /home/gabe/Documents/Developpement/eclipse-workspace/remote-control/main
+# Install script for directory: /mnt/data/Travail/Github/HomeAutomation-RemoteControl/src/remote-control/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -92,3 +92,8 @@
 1	137	1573918437	.bin_timestamp	e56244d8843da5d4
 1	64	1573920095	.bin_timestamp	1fdc364b51805f4e
 2	103	1573920475	.bin_timestamp	e56244d8843da5d4
+3	2793	1573928942	build.ninja	114ac3c6142a646c
+27	34	1573928942	project_elf_src.c	8f13feae29cfa6d7
+34	97	1573928942	CMakeFiles/bootloader.elf.dir/project_elf_src.c.obj	29f9bd3f394e52e5
+97	513	1573928943	bootloader.elf	c5734e6f545ce219
+513	640	1573928943	.bin_timestamp	7532ef347af4db57
