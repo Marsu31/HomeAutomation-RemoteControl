@@ -1,0 +1,13 @@
+# Target labels
+ mconf-idf
+# Source files and their labels
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/CMakeFiles/mconf-idf
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/CMakeFiles/mconf-idf.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/CMakeFiles/mconf-idf-complete.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure.rule
+/home/gabe/Documents/Developpement/eclipse-workspace/remote-control/build/cmake.run.esp32.xtensa/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build.rule
