@@ -8,8 +8,8 @@
 #ifndef MAIN_INCLUDE_SLEEP_H_
 #define MAIN_INCLUDE_SLEEP_H_
 
+#include "buttons.h"
 
-
-
+void init_hibernation();
 
 #endif /* MAIN_INCLUDE_SLEEP_H_ */

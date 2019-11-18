@@ -24,20 +24,9 @@ static const char *TAG_BUTTONS = "      rc-buttons";
 #define BTN_SCAN_TIMER_DIVIDER		8000	// base = 80MHz ; 80MHz/8000 = 10kHz => tick every 100us
 #define	BTN_SCAN_TIMER_ALARM_PERIOD	20		// unit: tick, 20 ticks = 2ms, 20000 ticks = 2s
 
-// button list
-button_t *buttons[BTN_NUMBER];
-
 // PUSH
 #define BTN_DOWN	0x1
 #define BTN_UP		0x2
-//typedef struct {
-//	gpio_num_t pin;
-//	bool inverted;
-//	uint16_t history;
-//	UBaseType_t event_mask;
-//} debounce_t;
-//
-//debounce_t *debounce;
 
 // ROTARY
 #define ROT_NOOP	0x0
@@ -51,17 +40,47 @@ button_t *buttons[BTN_NUMBER];
 #define ROT_LEFT_BEGIN	0x4
 #define ROT_LEFT_FINAL	0x5
 #define ROT_LEFT_NEXT	0x6
-const unsigned char rotary_transitions[7][4] = { { ROT_NEUTRAL, ROT_RIGHT_BEGIN, ROT_LEFT_BEGIN, ROT_NEUTRAL },		// ROT_NEUTRAL
-	{ ROT_RIGHT_NEXT, ROT_NEUTRAL, ROT_RIGHT_FINAL, ROT_NEUTRAL | ROT_RIGHT },	// ROT_RIGHT_FINAL
-	{ ROT_RIGHT_NEXT, ROT_RIGHT_BEGIN, ROT_NEUTRAL, ROT_NEUTRAL },				// ROT_RIGHT_BEGIN
-	{ ROT_RIGHT_NEXT, ROT_RIGHT_BEGIN, ROT_RIGHT_FINAL, ROT_NEUTRAL },			// ROT_RIGHT_NEXT
-	{ ROT_LEFT_NEXT, ROT_NEUTRAL, ROT_LEFT_BEGIN, ROT_NEUTRAL },				// ROT_LEFT_BEGIN
-	{ ROT_LEFT_NEXT, ROT_LEFT_FINAL, ROT_NEUTRAL, ROT_NEUTRAL | ROT_LEFT },		// ROT_LEFT_FINAL
-	{ ROT_LEFT_NEXT, ROT_LEFT_FINAL, ROT_LEFT_BEGIN, ROT_NEUTRAL }, };			// ROT_LEFT_NEXT
+const unsigned char rotary_transitions[7][4] = {
+	{
+		ROT_NEUTRAL,
+		ROT_RIGHT_BEGIN,
+		ROT_LEFT_BEGIN,
+		ROT_NEUTRAL },		// ROT_NEUTRAL
+	{
+		ROT_RIGHT_NEXT,
+		ROT_NEUTRAL,
+		ROT_RIGHT_FINAL,
+		ROT_NEUTRAL | ROT_RIGHT },	// ROT_RIGHT_FINAL
+	{
+		ROT_RIGHT_NEXT,
+		ROT_RIGHT_BEGIN,
+		ROT_NEUTRAL,
+		ROT_NEUTRAL },				// ROT_RIGHT_BEGIN
+	{
+		ROT_RIGHT_NEXT,
+		ROT_RIGHT_BEGIN,
+		ROT_RIGHT_FINAL,
+		ROT_NEUTRAL },			// ROT_RIGHT_NEXT
+	{
+		ROT_LEFT_NEXT,
+		ROT_NEUTRAL,
+		ROT_LEFT_BEGIN,
+		ROT_NEUTRAL },				// ROT_LEFT_BEGIN
+	{
+		ROT_LEFT_NEXT,
+		ROT_LEFT_FINAL,
+		ROT_NEUTRAL,
+		ROT_NEUTRAL | ROT_LEFT },		// ROT_LEFT_FINAL
+	{
+		ROT_LEFT_NEXT,
+		ROT_LEFT_FINAL,
+		ROT_LEFT_BEGIN,
+		ROT_NEUTRAL }, };			// ROT_LEFT_NEXT
 
 volatile unsigned char rotary_state = ROT_NEUTRAL;
 
-static portMUX_TYPE xBtnScanIsrMutex = portMUX_INITIALIZER_UNLOCKED;
+static portMUX_TYPE xBtnScanIsrMutex = portMUX_INITIALIZER_UNLOCKED
+;
 
 static void update_button(button_t *d) {
 	d->history = (d->history << 1) | gpio_get_level(d->gpio_num);
@@ -228,6 +247,10 @@ static void btn_scan_task(void *pvParameters) {
 		}
 		if ((xBtnScanEventGroupValue & EVT_MASK_BTN_WHITE) != 0) {
 			ESP_EARLY_LOGD(TAG_BUTTONS, "W");
+		}
+
+		if (xBtnScanEventGroupValue > 0) {
+			xTimerReset(xHibernationTimer, 0);
 		}
 
 	}
