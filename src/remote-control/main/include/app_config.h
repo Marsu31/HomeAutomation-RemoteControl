@@ -29,10 +29,10 @@
 #define GPIO_BTN_ROT     	GPIO_NUM_34
 #define GPIO_BTN_ROT_1     	GPIO_NUM_39
 #define GPIO_BTN_ROT_2    	GPIO_NUM_36
-#define GPIO_BTN_WHITE     	GPIO_NUM_15
+#define GPIO_BTN_WHITE     	GPIO_NUM_13
 
 // Shake sensor
-#define GPIO_SENSOR_SHAKE	GPIO_NUM_13
+#define GPIO_SENSOR_SHAKE	GPIO_NUM_15
 
 // Multicolors LED
 #define GPIO_LED_MULTI_RED		GPIO_NUM_27

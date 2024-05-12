@@ -1,0 +1,536 @@
+EESchema Schematic File Version 4
+LIBS:RemoteControl-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5D425AD3
+P 5700 2000
+F 0 "SW1" H 5700 2285 50  0000 C CNN
+F 1 "SW_Push_Red" H 5700 2194 50  0000 C CNN
+F 2 "Project_Module:project_SW_PUSH-12mm-RED" H 5700 2200 50  0001 C CNN
+F 3 "~" H 5700 2200 50  0001 C CNN
+	1    5700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D428379
+P 2650 2750
+F 0 "#PWR02" H 2650 2500 50  0001 C CNN
+F 1 "GND" H 2655 2577 50  0000 C CNN
+F 2 "" H 2650 2750 50  0001 C CNN
+F 3 "" H 2650 2750 50  0001 C CNN
+	1    2650 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 5D42920F
+P 6800 2000
+F 0 "SW4" H 6800 2285 50  0000 C CNN
+F 1 "SW_Push_Green" H 6800 2194 50  0000 C CNN
+F 2 "Project_Module:project_SW_PUSH-12mm-GREEN" H 6800 2200 50  0001 C CNN
+F 3 "~" H 6800 2200 50  0001 C CNN
+	1    6800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5D42983F
+P 5700 2500
+F 0 "SW2" H 5700 2785 50  0000 C CNN
+F 1 "SW_Push_Yellow" H 5700 2694 50  0000 C CNN
+F 2 "Project_Module:project_SW_PUSH-12mm-YELLOW" H 5700 2700 50  0001 C CNN
+F 3 "~" H 5700 2700 50  0001 C CNN
+	1    5700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW5
+U 1 1 5D429E78
+P 6800 2500
+F 0 "SW5" H 6800 2785 50  0000 C CNN
+F 1 "SW_Push_Blue" H 6800 2694 50  0000 C CNN
+F 2 "Project_Module:project_SW_PUSH-12mm-BLUE" H 6800 2700 50  0001 C CNN
+F 3 "~" H 6800 2700 50  0001 C CNN
+	1    6800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW3
+U 1 1 5D42C200
+P 6250 1200
+F 0 "SW3" H 6250 1567 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 6250 1476 50  0000 C CNN
+F 2 "Project_Module:project_RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 6100 1360 50  0001 C CNN
+F 3 "~" H 6250 1460 50  0001 C CNN
+	1    6250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L project:TFT_1_8_SPI_128x160 U2
+U 1 1 5D438FC2
+P 4200 950
+F 0 "U2" H 4500 1100 50  0000 L CNN
+F 1 "TFT_1_8_SPI_128x160" H 4150 -750 50  0000 L CNN
+F 2 "Project_Module:TFT_1_8_SPI_128x160_PinSocket_1x16_P2.54mm_Vertical" H 4200 950 50  0001 C CNN
+F 3 "" H 4200 950 50  0001 C CNN
+	1    4200 950 
+	1    0    0    -1  
+$EndComp
+Text Label 4200 1250 2    50   ~ 0
+MOSI
+Text Label 4200 1350 2    50   ~ 0
+MISO
+Text Label 4200 1450 2    50   ~ 0
+SCK
+Text Label 4200 1550 2    50   ~ 0
+CS
+Text Label 4200 1650 2    50   ~ 0
+SCL
+Text Label 4200 1750 2    50   ~ 0
+SDA
+Text Label 4200 2350 2    50   ~ 0
++3V3
+Text Label 4200 2450 2    50   ~ 0
+GND
+Text Notes 4700 700  2    50   ~ 0
+TFT 1.8"
+Text Notes 2000 700  2    50   ~ 0
+Connector Wemos D32 Pro
+Text Label 2400 1200 0    50   ~ 0
+GND
+Text Label 2400 2700 0    50   ~ 0
+GND
+Text Label 1100 1700 2    50   ~ 0
+Btn_Red
+$Comp
+L project:D32Pro U1
+U 1 1 5D41ED62
+P 1750 1950
+F 0 "U1" H 1750 3015 50  0000 C CNN
+F 1 "D32Pro" H 1750 2924 50  0000 C CNN
+F 2 "Project_Module:D32Pro_PinSocket_2x1x16_P2.54mm_Vertical" H 1800 1950 50  0001 C CNN
+F 3 "" H 1800 1950 50  0001 C CNN
+	1    1750 1950
+	1    0    0    -1  
+$EndComp
+Text Label 1100 1200 2    50   ~ 0
++3V3
+Text Label 5900 2000 0    50   ~ 0
+Btn_Red
+Text Label 5500 2000 2    50   ~ 0
++3V3
+Text Label 5500 2500 2    50   ~ 0
++3V3
+Text Label 6600 2500 2    50   ~ 0
++3V3
+Text Label 6600 2000 2    50   ~ 0
++3V3
+Text Label 1100 1800 2    50   ~ 0
+Btn_Green
+Text Label 7000 2000 0    50   ~ 0
+Btn_Green
+Text Label 5900 2500 0    50   ~ 0
+Btn_Yellow
+Text Label 7000 2500 0    50   ~ 0
+Btn_Blue
+Text Label 1100 1900 2    50   ~ 0
+Btn_Yellow
+Text Label 1100 2000 2    50   ~ 0
+Btn_Blue
+$Comp
+L 4xxx:HEF4093B U3
+U 1 1 5D4AD10D
+P 9400 1500
+F 0 "U3" H 9400 1825 50  0000 C CNN
+F 1 "CD4093BE" H 9400 1734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9400 1500 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4093B.pdf" H 9400 1500 50  0001 C CNN
+	1    9400 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:HEF4093B U3
+U 2 1 5D4AFAF1
+P 10650 1500
+F 0 "U3" H 10650 1825 50  0000 C CNN
+F 1 "CD4093BE" H 10650 1734 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10650 1500 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4093B.pdf" H 10650 1500 50  0001 C CNN
+	2    10650 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D4B202A
+P 8750 1500
+F 0 "C1" V 8498 1500 50  0000 C CNN
+F 1 "100n" V 8589 1500 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 8788 1350 50  0001 C CNN
+F 3 "~" H 8750 1500 50  0001 C CNN
+	1    8750 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5D4B2230
+P 10250 1800
+F 0 "C2" H 10365 1846 50  0000 L CNN
+F 1 "100n" H 10365 1755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 10288 1650 50  0001 C CNN
+F 3 "~" H 10250 1800 50  0001 C CNN
+	1    10250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5D4B27F1
+P 8500 1250
+F 0 "R6" H 8300 1300 50  0000 L CNN
+F 1 "100k" H 8250 1200 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8430 1250 50  0001 C CNN
+F 3 "~" H 8500 1250 50  0001 C CNN
+	1    8500 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5D4B2ACA
+P 9000 1800
+F 0 "R7" H 9070 1846 50  0000 L CNN
+F 1 "1M" H 9070 1755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8930 1800 50  0001 C CNN
+F 3 "~" H 9000 1800 50  0001 C CNN
+	1    9000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5D4B3FA0
+P 10000 1500
+F 0 "RV1" V 9793 1500 50  0000 C CNN
+F 1 "1M" V 9884 1500 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 10000 1500 50  0001 C CNN
+F 3 "~" H 10000 1500 50  0001 C CNN
+	1    10000 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW6
+U 1 1 5D4B57F2
+P 8300 1750
+F 0 "SW6" V 8350 1600 50  0000 C CNN
+F 1 "SW-420" V 8250 1550 50  0000 C CNN
+F 2 "Project_Module:SW_420_L10.0mm_D5.5mm_P15.00mm_Horizontal" H 8300 1950 50  0001 C CNN
+F 3 "~" H 8300 1950 50  0001 C CNN
+	1    8300 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10350 1400 10350 1500
+Wire Wire Line
+	10150 1500 10250 1500
+Connection ~ 10350 1500
+Wire Wire Line
+	10350 1500 10350 1600
+Wire Wire Line
+	10250 1650 10250 1500
+Connection ~ 10250 1500
+Wire Wire Line
+	10250 1500 10350 1500
+Wire Wire Line
+	9850 1500 9750 1500
+Wire Wire Line
+	9750 1500 9750 1700
+Wire Wire Line
+	9750 1700 10000 1700
+Wire Wire Line
+	10000 1700 10000 1650
+Connection ~ 9750 1500
+Wire Wire Line
+	9750 1500 9700 1500
+Wire Wire Line
+	9100 1600 9100 1500
+Wire Wire Line
+	8900 1500 9000 1500
+Connection ~ 9100 1500
+Wire Wire Line
+	9100 1500 9100 1400
+Wire Wire Line
+	9000 1650 9000 1500
+Connection ~ 9000 1500
+Wire Wire Line
+	9000 1500 9100 1500
+Wire Wire Line
+	8600 1500 8500 1500
+Wire Wire Line
+	8300 1500 8300 1550
+Wire Wire Line
+	8500 1400 8500 1500
+Connection ~ 8500 1500
+Wire Wire Line
+	8500 1500 8300 1500
+Wire Wire Line
+	8500 1100 8500 1000
+Wire Wire Line
+	8300 1950 8300 2050
+Wire Wire Line
+	9000 1950 9000 2050
+Wire Wire Line
+	10250 1950 10250 2050
+$Comp
+L power:+3.3V #PWR06
+U 1 1 5D4C9AAA
+P 8500 1000
+F 0 "#PWR06" H 8500 850 50  0001 C CNN
+F 1 "+3.3V" H 8515 1173 50  0000 C CNN
+F 2 "" H 8500 1000 50  0001 C CNN
+F 3 "" H 8500 1000 50  0001 C CNN
+	1    8500 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5D4CA43C
+P 8300 2050
+F 0 "#PWR05" H 8300 1800 50  0001 C CNN
+F 1 "GND" H 8305 1877 50  0000 C CNN
+F 2 "" H 8300 2050 50  0001 C CNN
+F 3 "" H 8300 2050 50  0001 C CNN
+	1    8300 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5D4CA7D3
+P 9000 2050
+F 0 "#PWR07" H 9000 1800 50  0001 C CNN
+F 1 "GND" H 9005 1877 50  0000 C CNN
+F 2 "" H 9000 2050 50  0001 C CNN
+F 3 "" H 9000 2050 50  0001 C CNN
+	1    9000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5D4CAA73
+P 10250 2050
+F 0 "#PWR08" H 10250 1800 50  0001 C CNN
+F 1 "GND" H 10255 1877 50  0000 C CNN
+F 2 "" H 10250 2050 50  0001 C CNN
+F 3 "" H 10250 2050 50  0001 C CNN
+	1    10250 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10950 1500 11100 1500
+Text Label 11100 1500 2    50   ~ 0
+Tilt
+Text Label 1100 1600 2    50   ~ 0
+Tilt
+Text Notes 9700 700  2    50   ~ 0
+Tilt sensor
+Wire Notes Line
+	11200 2400 8050 2400
+Wire Notes Line
+	8050 2400 8050 500 
+$Comp
+L LED:IR204A D1
+U 1 1 5D4F24B9
+P 4650 3950
+F 0 "D1" V 4646 3873 50  0000 R CNN
+F 1 "IR204A" V 4555 3873 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm_Clear" H 4650 4125 50  0001 C CNN
+F 3 "http://www.everlight.com/file/ProductFile/IR204-A.pdf" H 4600 3950 50  0001 C CNN
+	1    4650 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_RGBA D2
+U 1 1 5D4F35BC
+P 6950 3300
+F 0 "D2" H 6950 3797 50  0000 C CNN
+F 1 "LED_RGBA" H 6950 3706 50  0000 C CNN
+F 2 "Project_Module:LED_RGBA_RECT_5.0mm_2.45mm" H 6950 3250 50  0001 C CNN
+F 3 "~" H 6950 3250 50  0001 C CNN
+	1    6950 3300
+	1    0    0    -1  
+$EndComp
+Text Label 6150 3100 2    50   ~ 0
+Led_R
+Text Label 6150 3300 2    50   ~ 0
+Led_G
+Text Label 6150 3500 2    50   ~ 0
+Led_B
+Text Label 7400 3300 0    50   ~ 0
++3V3
+Text Label 1100 2100 2    50   ~ 0
+Led_R
+Text Label 1100 2200 2    50   ~ 0
+Led_G
+Text Label 1100 2300 2    50   ~ 0
+Led_B
+$Comp
+L Device:R R3
+U 1 1 5D53160B
+P 6500 3100
+F 0 "R3" V 6400 3000 50  0000 C CNN
+F 1 "22" V 6400 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6430 3100 50  0001 C CNN
+F 3 "~" H 6500 3100 50  0001 C CNN
+	1    6500 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5D531B1B
+P 6500 3300
+F 0 "R4" V 6400 3200 50  0000 C CNN
+F 1 "22" V 6400 3350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6430 3300 50  0001 C CNN
+F 3 "~" H 6500 3300 50  0001 C CNN
+	1    6500 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5D531E85
+P 6500 3500
+F 0 "R5" V 6400 3400 50  0000 C CNN
+F 1 "22" V 6400 3550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6430 3500 50  0001 C CNN
+F 3 "~" H 6500 3500 50  0001 C CNN
+	1    6500 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 3100 6650 3100
+Wire Wire Line
+	6750 3300 6650 3300
+Wire Wire Line
+	6750 3500 6650 3500
+Wire Wire Line
+	6350 3100 6150 3100
+Wire Wire Line
+	6350 3300 6150 3300
+Wire Wire Line
+	6350 3500 6150 3500
+Wire Wire Line
+	7150 3300 7400 3300
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 5D53CBCC
+P 4550 4450
+F 0 "Q1" H 4740 4496 50  0000 L CNN
+F 1 "2N3904" H 4740 4405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4750 4375 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 4550 4450 50  0001 L CNN
+	1    4550 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D53E6A9
+P 4650 3550
+F 0 "R2" H 4720 3596 50  0000 L CNN
+F 1 "18" H 4720 3505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4580 3550 50  0001 C CNN
+F 3 "~" H 4650 3550 50  0001 C CNN
+	1    4650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D53E9B0
+P 4050 4450
+F 0 "R1" V 3843 4450 50  0000 C CNN
+F 1 "1k" V 3934 4450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 4450 50  0001 C CNN
+F 3 "~" H 4050 4450 50  0001 C CNN
+	1    4050 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 4650 4650 4800
+Wire Wire Line
+	4650 4250 4650 4150
+Wire Wire Line
+	4650 3850 4650 3700
+Wire Wire Line
+	4650 3400 4650 3250
+Wire Wire Line
+	4350 4450 4200 4450
+Wire Wire Line
+	3900 4450 3750 4450
+$Comp
+L power:+3.3V #PWR03
+U 1 1 5D544B3D
+P 4650 3250
+F 0 "#PWR03" H 4650 3100 50  0001 C CNN
+F 1 "+3.3V" H 4665 3423 50  0000 C CNN
+F 2 "" H 4650 3250 50  0001 C CNN
+F 3 "" H 4650 3250 50  0001 C CNN
+	1    4650 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5D545341
+P 4650 4800
+F 0 "#PWR04" H 4650 4550 50  0001 C CNN
+F 1 "GND" H 4655 4627 50  0000 C CNN
+F 2 "" H 4650 4800 50  0001 C CNN
+F 3 "" H 4650 4800 50  0001 C CNN
+	1    4650 4800
+	1    0    0    -1  
+$EndComp
+Text Label 3750 4450 2    50   ~ 0
+Led_IR
+Text Label 1100 2400 2    50   ~ 0
+Led_IR
+Text Label 2400 1300 0    50   ~ 0
+MOSI
+Text Label 2400 1800 0    50   ~ 0
+MISO
+Text Label 2400 1900 0    50   ~ 0
+SCK
+Text Label 2400 1400 0    50   ~ 0
+SCL
+Text Label 2400 1700 0    50   ~ 0
+SDA
+Text Label 2400 2300 0    50   ~ 0
+CS
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5D427DAE
+P 750 1150
+F 0 "#PWR01" H 750 1000 50  0001 C CNN
+F 1 "+3.3V" H 765 1323 50  0000 C CNN
+F 2 "" H 750 1150 50  0001 C CNN
+F 3 "" H 750 1150 50  0001 C CNN
+	1    750  1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1200 750  1200
+Wire Wire Line
+	750  1200 750  1150
+Wire Wire Line
+	2400 2700 2650 2700
+Wire Wire Line
+	2650 2700 2650 2750
+$EndSCHEMATC

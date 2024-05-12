@@ -43,6 +43,12 @@ void app_main() {
 	ESP_LOGI(TAG, " - initialize LED multi (ledc channels)");
 	init_led_multi();
 
+	// Shake sensor
+	ESP_LOGI(TAG, "SHAKE SENSOR");
+	ESP_LOGI(TAG, " - initialize shake sensor");
+	init_shake_sensor();
+	// TODO : task
+
 	// Hibernation
 	ESP_LOGI(TAG, "HIBERNATION");
 	ESP_LOGI(TAG, " - initialize hibernation");
